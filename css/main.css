@@ -1,0 +1,115 @@
+body, html {
+    height: 100%;
+    letter-spacing: 1px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+a, p {
+  font-family: 'Open Sans', serif;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 500%;
+  line-height: 2;
+}
+
+section {
+  margin: 0;
+  height: 100vh;
+}
+
+footer {
+  height: 10vh;
+  background: #6b62ff;
+}
+
+#nav-bar {
+  background: #6b62ff;
+  float: right;
+  padding-right: 10%;
+  padding-top: 3%;
+}
+
+.opening-content {
+  text-align: center;
+  color: white;
+  padding-top: 15%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+  padding-top: 15%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.nav-link {
+  font-size: 110%;
+  text-decoration: none;
+  color: white;
+  padding-right: 20px;
+}
+
+.purple-section {
+  background: #6b62ff;
+}
+
+.grey-section {
+  background: #FAFAFA;
+}
+
+#logo {
+  float: left;
+  padding-top: 2.5%;
+  padding-left: 5%;
+}
+
+#circle1, #circle2 {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border: solid #dddddd 2px;
+  border-radius: 50%;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+
+#circle1:hover, #circle2:hover, #circle3:hover, #circle4:hover, #circle5:hover, #circle6:hover, #circle7:hover, #circle8:hover {
+  border: solid white 2px;
+}
+
+#circle3, #circle4 {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: solid #dddddd 2px;
+  border-radius: 50%;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+
+#circle5, #circle6, #circle7, #circle8 {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: solid #dddddd 2px;
+  border-radius: 50%;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
