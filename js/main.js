@@ -59,7 +59,7 @@ function makeNewPosition(circleID){
       h = winH + 2300;
       w = winW - 250;
       var min = h;
-      var max = h + 250;
+      var max = h + 180;
 
       var nh = Math.floor(Math.random() * (max - min) + min);
       var nw = Math.floor(Math.random() * w);
