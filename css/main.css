@@ -71,11 +71,11 @@ footer {
   padding-left: 5%;
 }
 
-#circle1, #circle2 {
-  position: fixed;
+#circle1, #circle2, #circle4, #circle7, #circle10 {
+  position: absolute;
   width: 200px;
   height: 200px;
-  border: solid #dddddd 2px;
+  border: solid #9690FF 2px;
   border-radius: 50%;
   -o-transition:.2s;
   -ms-transition:.2s;
@@ -84,28 +84,16 @@ footer {
   transition:.2s;
 }
 
-#circle1:hover, #circle2:hover, #circle3:hover, #circle4:hover, #circle5:hover, #circle6:hover, #circle7:hover, #circle8:hover {
+#circle1:hover, #circle2:hover, #circle3:hover, #circle4:hover, #circle5:hover, #circle6:hover,
+#circle7:hover, #circle8:hover, #circle9:hover, #circle10:hover, #circle11:hover {
   border: solid white 2px;
 }
 
-#circle3, #circle4 {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  border: solid #dddddd 2px;
-  border-radius: 50%;
-  -o-transition:.2s;
-  -ms-transition:.2s;
-  -moz-transition:.2s;
-  -webkit-transition:.2s;
-  transition:.2s;
-}
-
-#circle5, #circle6, #circle7, #circle8 {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  border: solid #dddddd 2px;
+#circle3, #circle5, #circle6, #circle8, #circle9, #circle11 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: solid #9690FF 2px;
   border-radius: 50%;
   -o-transition:.2s;
   -ms-transition:.2s;

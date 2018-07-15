@@ -1,3 +1,6 @@
+var winH = $(window).height();
+var winW = $(window).width();
+
 $(document).ready(function(){
     animateDiv("#circle1");
     animateDiv("#circle2");
@@ -7,24 +10,69 @@ $(document).ready(function(){
     animateDiv("#circle6");
     animateDiv("#circle7");
     animateDiv("#circle8");
+    animateDiv("#circle9");
+    animateDiv("#circle10");
+    animateDiv("#circle11");
 
 });
 
-function makeNewPosition(){
+function makeNewPosition(circleID){
+
+    var h;
+    var w;
 
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
+    if (circleID === "#circle1" || circleID === "#circle2" || circleID === "#circle3") {
+      h = winH - 300;
+      w = winW - 250;
+      var nh = Math.floor(Math.random() * h);
+      var nw = Math.floor(Math.random() * w);
 
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
+    } else if (circleID === "#circle4" || circleID === "#circle5") {
+      h = winH;
+      w = winW - 250;
+      var min = h;
+      var max = h + 450;
 
+      var nh = Math.floor(Math.random() * (max - min) + min);
+      var nw = Math.floor(Math.random() * w);
+
+    } else if (circleID === "#circle6") {
+      h = winH + 800;
+      w = winW - 250;
+      var min = h;
+      var max = h + 450;
+
+      var nh = Math.floor(Math.random() * (max - min) + min);
+      var nw = Math.floor(Math.random() * w);
+
+    } else if (circleID === "#circle7" || circleID === "#circle8") {
+      h = winH + 1500;
+      w = winW - 250;
+      var min = h;
+      var max = h + 450;
+
+      var nh = Math.floor(Math.random() * (max - min) + min);
+      var nw = Math.floor(Math.random() * w);
+
+    } else if (circleID === "#circle9" || circleID === "#circle10" || circleID === "#circle11") {
+      h = winH + 2300;
+      w = winW - 250;
+      var min = h;
+      var max = h + 450;
+
+      var nh = Math.floor(Math.random() * (max - min) + min);
+      var nw = Math.floor(Math.random() * w);
+
+    }
+
+    console.log($(window).height());
     return [nh,nw];
 
 }
 
 function animateDiv(thing){
-    var newq = makeNewPosition();
+    var newq = makeNewPosition(thing);
     var oldq = $(thing).offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
 
