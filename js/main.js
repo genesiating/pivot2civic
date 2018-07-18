@@ -1,98 +1,71 @@
-var winH = $(window).height();
-var winW = $(window).width();
+class Circle {
+  constructor() {
+    this.wid = window.innerWidth;
+    this.hgt = window.innerHeight;
+    this.x = random(0, this.wid);
+    this.y = random(150, this.hgt-100);
+    this.size = random(100, 300);
 
-$(document).ready(function(){
-    animateDiv("#circle1");
-    animateDiv("#circle2");
-    animateDiv("#circle3");
-    animateDiv("#circle4");
-    animateDiv("#circle5");
-    animateDiv("#circle6");
-    animateDiv("#circle7");
-    animateDiv("#circle8");
-    animateDiv("#circle9");
-    animateDiv("#circle10");
-    animateDiv("#circle11");
+    //make random not include 0
+    this.xMovement = random(-2, 2);
+    this.yMovement = random(-2, 2);
+  }
 
-});
+  displayAndMove() {
+    noFill();
+    strokeWeight(1.5);
+    stroke(250);
+    ellipse(this.x, this.y, this.size, this.size);
+    this.x += this.xMovement;
+    this.y += this.yMovement;
 
-function makeNewPosition(circleID){
-
-    var h;
-    var w;
-
-    // Get viewport dimensions (remove the dimension of the div)
-    if (circleID === "#circle1" || circleID === "#circle2" || circleID === "#circle3") {
-      h = winH - 300;
-      w = winW - 250;
-      var nh = Math.floor(Math.random() * h);
-      var nw = Math.floor(Math.random() * w);
-
-    } else if (circleID === "#circle4" || circleID === "#circle5") {
-      h = winH;
-      w = winW - 250;
-      var min = h;
-      var max = h + 450;
-
-      var nh = Math.floor(Math.random() * (max - min) + min);
-      var nw = Math.floor(Math.random() * w);
-
-    } else if (circleID === "#circle6") {
-      h = winH + 800;
-      w = winW - 250;
-      var min = h;
-      var max = h + 450;
-
-      var nh = Math.floor(Math.random() * (max - min) + min);
-      var nw = Math.floor(Math.random() * w);
-
-    } else if (circleID === "#circle7" || circleID === "#circle8") {
-      h = winH + 1500;
-      w = winW - 250;
-      var min = h;
-      var max = h + 450;
-
-      var nh = Math.floor(Math.random() * (max - min) + min);
-      var nw = Math.floor(Math.random() * w);
-
-    } else if (circleID === "#circle9" || circleID === "#circle10" || circleID === "#circle11") {
-      h = winH + 2300;
-      w = winW - 250;
-      var min = h;
-      var max = h + 180;
-
-      var nh = Math.floor(Math.random() * (max - min) + min);
-      var nw = Math.floor(Math.random() * w);
-
+    if (this.x < 0 || this.x > this.wid-100) {
+      this.xMovement *= -1;
     }
 
-    console.log($(window).height());
-    return [nh,nw];
+    if (this.y < 100|| this.y > this.hgt-100) {
+      this.yMovement *= -1;
+    }
+  }
 
 }
 
-function animateDiv(thing){
-    var newq = makeNewPosition(thing);
-    var oldq = $(thing).offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
+var circ;
+var circArray = [];
+var playfair;
+var openSans;
 
-    $(thing).animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv(thing);
-    });
+function preload() {
+  playfair = loadFont("assets/playfair.otf");
+  openSans = loadFont("assets/open-sans.ttf");
 
-};
+}
 
-function calcSpeed(prev, next) {
+function setup() {
+  var canv = createCanvas(window.innerWidth, window.innerHeight);
+  canv.parent("#sketch");
 
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
+  for (var i = 0; i < 10; i++) {
+    circ = new Circle();
+    circArray.push(circ);
+  }
 
-    var greatest = x > y ? x : y;
+}
 
-    var speedModifier = 0.1;
+function draw() {
+  background(107, 98, 255);
+  for (var i = 0; i < circArray.length; i++) {
+    circArray[i].displayAndMove();
+  }
 
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
+  textFont(playfair);
+  noStroke();
+  fill(255);
+  textSize(80);
+  text("We're Launching!", window.innerWidth/2 - 50, window.innerHeight/2 - 120);
+  textSize(23);
+  textFont(openSans);
+  textAlign(CENTER);
+  text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", window.innerWidth/2 - 470, window.innerHeight/2 - 40, window.innerWidth/2 + 150, window.innerHeight/2 +10);
 
 }
