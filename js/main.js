@@ -1,33 +1,41 @@
 class Circle {
   constructor() {
+    //initial values: width, height, x positon, y position, diameter
     this.wid = window.innerWidth;
     this.hgt = window.innerHeight;
     this.x = random(0, this.wid);
     this.y = random(150, this.hgt-100);
     this.size = random(100, 300);
 
-    //make random not include 0
-    this.xMovement = random(-2, 2);
-    this.yMovement = random(-2, 2);
+    //TODO: random doesn't include 0
+    this.randX = random(-2, 2);
+    this.randY = random(-2, 2);
+
+    if (this.randX === 0) {
+      this.randX += 0.5;
+    } else if (this.randY === 0) {
+      this.randY += 0.5;
+    }
+    this.xMovement = this.randX;
+    this.yMovement = this.randY;
   }
 
   displayAndMove() {
     noFill();
-    strokeWeight(1.5);
+    strokeWeight(0.5);
     stroke(250);
     ellipse(this.x, this.y, this.size, this.size);
     this.x += this.xMovement;
     this.y += this.yMovement;
 
-    if (this.x < 0 || this.x > this.wid-100) {
+    if (this.x < 0 || this.x > this.wid - 50) {
       this.xMovement *= -1;
     }
 
-    if (this.y < 100|| this.y > this.hgt-100) {
+    if (this.y < 100|| this.y > this.hgt - 50) {
       this.yMovement *= -1;
     }
   }
-
 }
 
 var circ;
@@ -42,13 +50,15 @@ function preload() {
 }
 
 function setup() {
-  var canv = createCanvas(window.innerWidth, window.innerHeight);
+  var canv = createCanvas(window.innerWidth, window.innerHeight - 100);
   canv.parent("#sketch");
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 6; i++) {
     circ = new Circle();
     circArray.push(circ);
   }
+
+  textAlign(CENTER);
 
 }
 
@@ -57,15 +67,8 @@ function draw() {
   for (var i = 0; i < circArray.length; i++) {
     circArray[i].displayAndMove();
   }
+}
 
-  textFont(playfair);
-  noStroke();
-  fill(255);
-  textSize(80);
-  text("We're Launching!", window.innerWidth/2 - 50, window.innerHeight/2 - 120);
-  textSize(23);
-  textFont(openSans);
-  textAlign(CENTER);
-  text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", window.innerWidth/2 - 470, window.innerHeight/2 - 40, window.innerWidth/2 + 150, window.innerHeight/2 +10);
-
+function windowResized() {
+  resizeCanvas(window.innerWidth, 400);
 }

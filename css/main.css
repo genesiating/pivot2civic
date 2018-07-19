@@ -28,6 +28,10 @@ footer {
   background: #6b62ff;
 }
 
+#sketch {
+  position: relative;
+}
+
 #nav-bar {
   background: #6b62ff;
   float: right;
@@ -57,38 +61,36 @@ footer {
   background: #FAFAFA;
 }
 
+
+#opener {
+  position: absolute;
+  z-index: 3;
+  color: white;
+  left: 19%;
+}
+
 #logo {
   float: left;
   padding-top: 2.5%;
   padding-left: 5%;
 }
 
-#circle1, #circle2 {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border: solid #9690FF 2px;
-  border-radius: 50%;
-  -o-transition:.2s;
-  -ms-transition:.2s;
-  -moz-transition:.2s;
-  -webkit-transition:.2s;
-  transition:.2s;
-}
+@media screen and (max-width: 600px) {
+  section {
+    height: 70vh;
+  }
 
-#circle1:hover, #circle2:hover, #circle3:hover {
-  border: solid white 2px;
-}
+  h1 {
+    font-size: 250%;
+  }
 
-#circle3 {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border: solid #9690FF 2px;
-  border-radius: 50%;
-  -o-transition:.2s;
-  -ms-transition:.2s;
-  -moz-transition:.2s;
-  -webkit-transition:.2s;
-  transition:.2s;
+  p {
+    font-size: 10px;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+  }
+
 }
