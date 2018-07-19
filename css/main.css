@@ -18,13 +18,18 @@ h1 {
   line-height: 2;
 }
 
+h2 {
+  font-size: 200%;
+  color: white;
+}
+
 section {
   margin: 0;
   height: 100vh;
 }
 
 footer {
-  height: 10vh;
+  height: 15vh;
   background: #6b62ff;
 }
 
@@ -75,12 +80,21 @@ footer {
   padding-left: 5%;
 }
 
+#thanks {
+  color: white;
+}
+
+a {
+  color: #FAFAFA;
+}
+
 @media screen and (max-width: 600px) {
   section {
-    height: 70vh;
+    height: 80vh;
   }
 
   h1 {
+    margin-top: 80%;
     font-size: 250%;
   }
 

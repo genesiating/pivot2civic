@@ -68,7 +68,3 @@ function draw() {
     circArray[i].displayAndMove();
   }
 }
-
-function windowResized() {
-  resizeCanvas(window.innerWidth, 400);
-}
