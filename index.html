@@ -35,7 +35,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" id="top-links-structure">
-            <a href="signup.html" target="_blank" class="join top-link"> Join Our Newsletter</a>
+            <a href="signup.html" target="_blank" class="join top-link" id="open-popup1"> Join Our Newsletter</a>
             <a href="#about" class="menu-option top-link"> About </a>
             <a href="#team" class="menu-option top-link"> Our Team</a>
             <a href="#questions" class="menu-option top-link"> FAQ </a>
@@ -65,7 +65,7 @@
         <div class="col-md-5">
         </div>
         <div class="col-md-7">
-          <button id="open-popup"> Join Our Newsletter</button>
+          <button id="open-popup2"> Join Our Newsletter</button>
         </div>
       </div>
     </div>
@@ -174,10 +174,15 @@
         document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     };
 
-    document.getElementById("open-popup").onclick = function() {
+    document.getElementById("open-popup1").onclick = function() {
       showMailingPopUp();
       console.log("CLICK");
-  };
+    };
+
+    document.getElementById("open-popup2").onclick = function() {
+      showMailingPopUp();
+      console.log("CLICK");
+    };
     </script>
   </body>
 </html>
