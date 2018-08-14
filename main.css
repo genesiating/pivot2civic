@@ -136,12 +136,16 @@ h3 {
   width: 45%;
 }
 
-p, a, button {
+#team-title {
+  margin-bottom: 30px;
+}
+
+p, a, button, h4, h5 {
   font-family: "Open Sans", sans-serif;
 }
 
 p {
-  font-size: 18px !important;
+  font-size: 16px !important;
   line-height: 1.6;
 }
 
