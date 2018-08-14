@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Playfair+Display:700" rel="stylesheet">
+
     <title>Pivot to Civic</title>
 
     <!-- Bootstrap core CSS -->
@@ -62,7 +65,7 @@
         <div class="col-md-5">
         </div>
         <div class="col-md-7">
-          <button id="action"> Join Our Newsletter</button>
+          <button id="open-popup"> Join Our Newsletter</button>
         </div>
       </div>
     </div>
@@ -169,7 +172,10 @@
         document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     };
 
-    document.getElementById("action").onclick = function() {showMailingPopUp()};
+    document.getElementById("open-popup").onclick = function() {
+      showMailingPopUp();
+      console.log("CLICK");
+  };
     </script>
   </body>
 </html>
