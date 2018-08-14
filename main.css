@@ -8,7 +8,8 @@ body {
 #opener {
   color: white;
   height: 85vh;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url("assets/hero-img.jpg");
   padding-top: 60px;
 }
@@ -130,7 +131,7 @@ h3 {
   width: 45%;
 }
 
-p, a {
+p, a, button {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -237,7 +238,7 @@ a:hover {
   width: 33px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
 
     p {
         font-size: 12px !important;
@@ -265,4 +266,46 @@ a:hover {
       padding-top: 20px;
       padding-bottom: 35px;
     }
+}
+
+@media only screen and (max-width: 480px) {
+
+    p {
+        font-size: 12px !important;
+    }
+
+    #opener {
+      background-size: cover;
+    }
+
+    #team {
+      height: 175vh;
+    }
+
+    #action {
+      font-size: 10px;
+      padding: 15px;
+    }
+
+    #social-footer {
+      float: none;
+      text-align: center;
+    }
+
+    .about-div {
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1000px) {
+
+  #team {
+    height: 180vh !important;
+  }
+
+  .about-div {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
 }
