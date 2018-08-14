@@ -129,6 +129,10 @@ h3 {
   font-size: 30px;
 }
 
+h4 {
+  font-weight: 700;
+}
+
 #submit-btn-header {
   margin-top: 20px;
   float: right;
