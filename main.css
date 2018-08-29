@@ -332,21 +332,37 @@ a:hover {
 
 @media only screen and (max-width: 480px) {
 
+    h1 {
+      font-size: 25px !important;
+    }
+
     p {
         font-size: 12px !important;
     }
 
+    ul {
+      font-size: 12px !important;
+    }
+
+    #email-bar {
+      width: 100%;
+    }
+
+    #logo {
+      width: 180px;
+    }
+
     #opener {
       background-size: cover;
+      height: 60vh;
+    }
+
+    #about {
+      height: 75vh;
     }
 
     #team {
-      height: 175vh;
-    }
-
-    #action {
-      font-size: 10px;
-      padding: 15px;
+      height: 180vh;
     }
 
     #social-footer {
@@ -357,6 +373,10 @@ a:hover {
     .about-div {
       padding-top: 20px;
       padding-bottom: 50 px;
+    }
+
+    .faq {
+      font-size: 17px;
     }
 }
 
