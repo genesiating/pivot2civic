@@ -5,6 +5,20 @@ body {
   background: #ec474d;
 }
 
+@font-face {
+  font-family: CircularStd-Black;
+  src: url("fonts/CircularStd-Black.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: CircularStd-Book;
+  src: url("fonts/CircularStd-Book.otf");
+  font-weight: lighter;
+  font-style: lighter;
+}
+
 #opener {
   color: white;
   height: 85vh;
@@ -14,7 +28,11 @@ body {
   padding-top: 60px;
 }
 
-#team, #about {
+#about {
+  height: 55vh;
+}
+
+#team {
   height: 70vh;
 }
 
@@ -22,7 +40,7 @@ body {
   color: white;
 }
 
-#open-popup1 {
+#join1 {
   background-color: #ec474d;
   border: 1px solid white;
   margin-right: 10px !important;
@@ -37,13 +55,13 @@ body {
   transition: 0.3s;
 }
 
-#open-popup2 {
+#join2 {
   border: 2px solid #ec474d;
   background-color: #ec474d;
   color: white;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   display: inline-block;
   margin-top: 20px;
   font-size: 16px;
@@ -54,9 +72,19 @@ body {
   transition: 0.3s;
 }
 
-#open-popup1:hover, #open-popup2:hover {
+#join1:hover, #join2:hover {
   background-color: white;
   color: #ec474d;
+}
+
+#email-bar {
+  color: grey;
+  width: 50%;
+  padding: 10px;
+}
+
+#mc_embed_signup {
+  line-height: 1;
 }
 
 .white-section {
@@ -66,6 +94,10 @@ body {
 .footer-icon {
   width: 20px;
   margin-left: 15px;
+}
+
+#navcontainer {
+  margin-left: 6.5%;
 }
 
 #team {
@@ -88,7 +120,8 @@ body {
 }
 
 #logo {
-  width: 200px;
+  width: 320px;
+  margin-right: ($spacer * .50) !important;
 }
 
 #emily {
@@ -119,9 +152,20 @@ body {
   background-color: white;
 }
 
-h1, h2, h3 {
-  font-family: "Playfair Display", serif;
+h1, label {
+  font-family: "CircularStd-Book", serif;
   margin-bottom: 5%;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 53px !important;
+}
+
+h2, h3 {
+  font-family: "CircularStd-Black", serif;
+  margin-bottom: 5%;
+  font-weight: lighter;
 }
 
 h3 {
@@ -131,6 +175,10 @@ h3 {
 
 h4 {
   font-weight: 700;
+}
+
+label {
+  font-size: 20px;
 }
 
 #submit-btn-header {
@@ -144,7 +192,7 @@ h4 {
   margin-bottom: 30px;
 }
 
-p, a, button, h4, h5 {
+p, a, button, h4, h5, ul, li {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -216,8 +264,8 @@ a:visited {
 .navbar {
   background-color: #ec474d;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 a:hover {
@@ -249,6 +297,7 @@ a:hover {
 
 .socials {
   width: 33px;
+  padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -307,7 +356,7 @@ a:hover {
 
     .about-div {
       padding-top: 20px;
-      padding-bottom: 35px;
+      padding-bottom: 50 px;
     }
 }
 

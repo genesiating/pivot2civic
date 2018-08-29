@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="civic tech, tech, entry level, entry-level,
+    jobs, new grad, grad, career change, civic, techhnology, civic digital fellows,
+    social impact jobs, social impact tech, social good tech, social good,
+    nonprofit tech, govtech, emily fong, genesia ting, software development jobs,
+    software engineering jobs, public good, public interest tech,
+    public interest jobs, design jobs, product jobs, data science jobs">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -17,12 +23,14 @@
 
     <!-- Custom styles for this template -->
     <link href="main.css" rel="stylesheet">
+
+    <script src="main.js"></script>
   </head>
 
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container" id="navcontainer">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -34,7 +42,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" id="top-links-structure">
-            <button class="top-link" id="open-popup1"> Join Our Newsletter</button>
+            <a href="https://gmail.us18.list-manage.com/subscribe/post?u=b362cb82549ec5e4bfcaad1a4&id=71471a27c0"><button class="top-link" id="join1"> Join Our Newsletter</button></a>
             <a href="#about" class="menu-option top-link"> About </a>
             <a href="#team" class="menu-option top-link"> Our Team</a>
             <a href="#questions" class="menu-option top-link"> FAQ </a>
@@ -50,13 +58,7 @@
         </div>
 
         <div class="col-md-7">
-          <h1> Welcome! </h1>
-          <p> The Pivot to Civic initiative — started by recent grads looking for
-              opportunities in civic tech — aims to build a talent pipeline of
-              budding designers, developers, and product people into the social
-              impact technology space. We're passionate about sharing these
-              opportunities because we believe that the future of tech is
-              forward-thinking, inclusive, and impact-oriented. </p>
+          <h1> Pivot to Civic is a biweekly newsletter for entry-level civic tech jobs.  </h1>
               <br>
         </div>
       </div>
@@ -64,7 +66,23 @@
         <div class="col-md-5">
         </div>
         <div class="col-md-7">
-          <button id="open-popup2"> Join Our Newsletter</button>
+
+          <!-- Begin MailChimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <div align="center" id="mc_embed_signup">
+            <form action="https://gmail.us18.list-manage.com/subscribe/post?u=b362cb82549ec5e4bfcaad1a4&amp;id=71471a27c0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+            	<label for="mce-EMAIL">Join Our Newsletter!</label>
+              <br>
+            	<input id="email-bar" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b362cb82549ec5e4bfcaad1a4_71471a27c0" tabindex="-1" value=""></div>
+                <div class="clear"><input id="join2" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            </div>
+            <!--End mc_embed_signup-->
+
         </div>
       </div>
     </div>
@@ -78,7 +96,12 @@
 
         <div class="col-md-9">
           <br>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>The Pivot to Civic initiative aims to build a talent pipeline of budding designers, developers, and product people into the social impact technology space. We are a group of recent grads who set out to cultivate a community of entry-level techies and provide them the opportunity to make an impact. We seek to educate, connect, and equip the next generation of mission-driven technologists with the tools they need to make a difference.
+
+          <br><br>We'll send you jobs with organizations that are, in some way, working to make the world better. We'll send you openings in product, design, and engineering from advocacy organizations, government, social enterprise, and more.
+
+          <br><br>Interested? Sign up for our newsletter to receive job postings and civic tech community updates!
+          </p>
         </div>
       </div>
 
@@ -131,7 +154,18 @@
         </div>
         <br>
         <div class="col-md-9">
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h4 class="faq" onclick="toggle(0)"> What kind of postings will I receive? + </h4>
+          <p class="ans" style="display:none;"> We send out roles in Design, Engineering, Data Science, and Product straight to your inbox every other week. </p>
+          <h4 class="faq" onclick="toggle(1)"> How can I get more involved? + </h4>
+          <ul class="ans" style="display:none;">
+            <li>Follow us on <a href="www.twitter.com/pivottocivic">Twitter</a>!</li>
+            <li>Share our newsletter!</li>
+            <li>Give us your <a href="mailto:hello@pivottocivic.com">feedback</a>!</li>
+          </ul>
+          <h4 class="faq" onclick="toggle(2)"> I’m a company/talent/recruiter looking to expand our entry-level talent base. How can I reach out? + </h4>
+          <p class="ans" style="display:none;"> We’re excited to work with you! Email us at hello@pivottocivic.com! </p>
+          <h4 class="faq" onclick="toggle(3)"> My question wasn’t answered here, how can I get in contact with Pivot to Civic? + </h4>
+          <p class="ans" style="display:none;"> Email us at hello@pivottocivic.com! </p>
       </div>
     </div>
     </div> <!-- /container -->
@@ -148,8 +182,8 @@
             <div id="social-footer">
               <a href="mailto:hello@pivottocivic.com"><img class="footer-icon" src="assets/email.svg"></a>
               <a href="https://www.linkedin.com/company/pivottocivic/" target="_blank"><img class="footer-icon" src="assets/linkedin-footer.svg"></a>
-              <img class="footer-icon" src="assets/twitter-footer.svg">
-              <img class="footer-icon" src="assets/slack.svg">
+              <img href="https://twitter.com/pivottocivic" target="_blank" class="footer-icon" src="assets/twitter-footer.svg">
+              <!-- <img href="https://join.slack.com/t/pivottocivic/shared_invite/enQtNDI1MTI2MzU0NDgxLTFiYzg1YzExZDFkNTdlMzQyZDJmMTllMjhkNmJlNDhhNmM2OWRhMmY1YWIxNTM5NzYxOTZkZTlmY2FlODJjZDM" target="_blank" class="footer-icon" src="assets/slack.svg"> -->
             </div>
           </div>
         </div>
@@ -163,22 +197,5 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-
-    <script>
-    function showMailingPopUp() {
-        require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"b362cb82549ec5e4bfcaad1a4","lid":"71471a27c0"}) });
-        document.cookie = "MCPopupClosed=yes; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    };
-
-    document.getElementById("open-popup1").onclick = function() {
-      showMailingPopUp();
-    };
-
-    document.getElementById("open-popup2").onclick = function() {
-      showMailingPopUp();
-    };
-    </script>
   </body>
 </html>
