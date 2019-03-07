@@ -1,403 +1,202 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-  background: #ec474d;
-}
-
-}
-
-@font-face {
-  font-family: CircularStd-Black;
-  src: url("fonts/CircularStd-Black.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: CircularStd-Book;
-  src: url("fonts/CircularStd-Book.otf");
-  font-weight: lighter;
-  font-style: lighter;
-}
-
-#opener {
-  color: white;
-  height: 70vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("assets/hero-img.jpg");
-  padding-top: 60px;
-}
-
-#about {
-  height: 75vh;
-}
-
-#team {
-  height: 75vh;
-}
-
-#end-footer {
-  color: white;
-}
-
-#join1 {
-  background-color: #ec474d;
-  border: 1px solid white;
-  margin-right: 10px !important;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: white;
-  border-radius: 5px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-#join2 {
-  border: 2px solid #ec474d;
-  background-color: #ec474d;
-  color: white;
-  padding: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  display: inline-block;
-  margin-top: 20px;
+  font-family: "Roboto Mono", sans-serif;
+  color: #676C72;
   font-size: 16px;
-  border-radius: 5px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 0.4px;
 }
 
-#join1:hover, #join2:hover {
-  background-color: white;
-  color: #ec474d;
+#nav {
+  height: 50px;
 }
 
-#email-bar {
-  color: grey;
-  width: 50%;
-  padding: 15px;
+#nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 90px;
+  margin-top: 45px;
 }
 
-#mc_embed_signup {
-  line-height: 1;
+#nav-items * {
+  margin-left: 50px;
 }
 
-.white-section {
-  background-color: white;
+.nav-link h4:hover {
+  color: #EA3433;
+  border-bottom: #EA3433 1px solid;
 }
 
-.footer-icon {
-  width: 20px;
-  margin-left: 15px;
-}
-
-#navcontainer {
-  margin-left: 6.5%;
-}
-
-#team {
-  background-color: #f5f5f5;
-}
-
-#next-gen {
-  background-color: white;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#next-gen-desc {
-  background-color: white;
-  float: right;
-  margin-top: 10px;
-  padding: 10px;
-  width: 50%;
-  box-shadow: 20px 20px #6b62ff;
-}
-
-#logo {
-  width: 250px;
-  margin-right: ($spacer * .50) !important;
-}
-
-#emily {
-  background-size: cover;
-  background-image: url("assets/e.jpg");
-}
-
-#genesia {
-  background-size: cover;
-  background-image: url("assets/g.png");
-}
-
-#omer {
-  background-size: cover;
-  background-image: url("assets/o.jpeg");
-}
-
-#social-footer {
-  float: right;
-}
-
-.stripe {
-  z-index: -1;
-  height: 10vh;
-}
-
-#main-stripe {
-  background-color: white;
-}
-
-h1, label {
-  font-family: "CircularStd-Book", serif;
-  margin-bottom: 5%;
-  font-weight: lighter;
-}
-
-h1 {
-  font-size: 40px !important;
-}
-
-h2, h3 {
-  font-family: "CircularStd-Black", serif;
-  margin-bottom: 5%;
-  font-weight: lighter;
-}
-
-h3 {
-  color: #ec474d;
-  font-size: 30px;
-}
-
-h4 {
-  font-weight: 700;
-}
-
-label {
-  font-size: 20px;
-}
-
-#submit-btn-header {
-  margin-top: 20px;
-  float: right;
-  display: inline-block;
-  width: 45%;
-}
-
-#team-title {
-  margin-bottom: 30px;
-}
-
-p, a, button, h4, h5, ul, li {
-  font-family: "Open Sans", sans-serif;
-}
-
-p, ul{
-  font-size: 16px !important;
-  line-height: 1.6;
+.nav-link {
+  text-decoration: none;
 }
 
 a {
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  color: inherit;
 }
 
-a:active {
-  color: white;
-  text-decoration: none !important;
+#logo {
+  width: 15%;
 }
 
-a:visited {
-  color: white;
-  text-decoration: none !important;
-}
-
-.top-link {
-  margin-left: 25px;
-}
-
-#top-links-structure {
-  margin-top: 15px;
-}
-
-.about-pic {
-  border: none;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
+#hero {
   margin: auto;
-}
-
-.about-div {
+  width: 85%;
+  height: 350px;
+  background-image: url("assets/hero.png");
   text-align: center;
 }
 
-.jumbotron {
-  margin-bottom: 0;
-  padding-left: 10%;
-  padding-right: 10%;
+a {
+  font-style: normal;
+  text-size: 60px;
 }
 
-.menu-option {
-  color: white;
-  padding-right: 20px;
-}
-
-.menu-btn {
-  margin-right: 20px;
-  color: white;
-  background-color: #ec474d;
-  border: solid white 1px;
-  border-radius: 5px;
-  padding-right: 8px;
-  padding-left: 8px;
-  padding-top: 2px;
-  padding-bottom: 5px;
-}
-
-.navbar {
-  background-color: #ec474d;
-  border: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.faq {
-  line-height: 1.7;
-}
-
-a:hover {
-  color: #000000;
-  text-decoration: none;
-}
-
-.navbar-name, .navbar-name:active, .navbar-name:visited {
-  font-family: "Playfair Display", serif;
-  color: white;
-  margin: 20px;
+#home {
+  color: #560936;
   padding-top: 20px;
-  font-size: 25px;
-  text-decoration: none;
-}
-
-.navbar-name:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar-brand:hover {
-  color: white;
-}
-
-.collapsed {
-  border: white;
-}
-
-.socials {
-  width: 33px;
   padding-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 25px 0 #E01617;
 }
 
-@media only screen and (max-width: 480px) {
-
-    p {
-        font-size: 12px !important;
-    }
-
-    #opener {
-      background-size: cover;
-    }
-
-    #team {
-      height: 180vh;
-    }
-
-    #action {
-      font-size: 10px;
-      padding: 15px;
-    }
-
-    #social-footer {
-      float: none;
-      text-align: center;
-    }
-
-    .about-div {
-      padding-top: 20px;
-      padding-bottom: 35px;
-    }
+#news {
+  border: solid 1px #EA3433;
+  color: #EA3433;
+  background-color: white;
+  text-align: center;
+  margin-left: 39%;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
-@media only screen and (max-width: 480px) {
+h1, h3 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 
-    h1 {
-      font-size: 25px !important;
-    }
-
-    p {
-        font-size: 12px !important;
-    }
-
-    ul {
-      font-size: 12px !important;
-    }
-
-    #email-bar {
-      width: 100%;
-    }
-
-    #logo {
-      width: 180px;
-    }
-
-    #opener {
-      background-size: cover;
-      height: 70vh;
-    }
-
-    #about {
-      height: 75vh;
-    }
-
-    #team {
-      height: 193vh;
-    }
-
-    #social-footer {
-      float: none;
-      text-align: center;
-    }
-
-    .about-div {
-      padding-top: 20px;
-      padding-bottom: 50 px;
-    }
-
-    .faq {
-      font-size: 17px;
-    }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1000px) {
+h3 {
+  font-size: 30px;
+}
 
-  #about {
-    height: 95vh;
-  }
+#merge {
+  color: white;
+  font-size: 85px;
+  padding-top: 40px;
+}
 
-  #team {
-    height: 195vh !important;
-  }
+.stando {
+  width: 50%;
+  color: #560936;
+  margin-top: 70px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 25%;
+  padding-bottom: 10px;
+}
 
-  .about-div {
-    padding-top: 20px;
-    padding-bottom: 35px;
-  }
+.line {
+  margin-left: 50%;
+	box-sizing: border-box;
+	height: 119px;
+  width: 1px;
+	border: 1px solid #EA3433;
+  margin-bottom: 40px;
+}
+
+.grey-bg {
+  margin: auto;
+  background-color: #FAFAFA;
+  width: 80%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.white-bg {
+  margin: auto;
+  height: 65vh;
+}
+
+.subheader {
+  color: #EA3433;
+  text-align: center;
+  font-size: 40px;
+}
+
+.descriptor {
+  font-style: normal;
+  text-align: left;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: row;
+  padding-left: 200px;
+}
+
+.half-box-img {
+  display: inline-block;
+}
+
+.half-box {
+  width: 20%;
+}
+
+.half-box-text {
+  display: inline-block;
+  font-style: normal;
+}
+
+.purple-subhead {
+  color: #560936;
+  line-height: 0.001em;
+}
+
+.title {
+  color: #EA3433;
+}
+
+.team-img {
+  width: 230px;
+  border-radius: 50%;
+  float: left;
+}
+
+.faq-half {
+  width: 43%;
+  float: left;
+  padding-left: 6%;
+}
+
+.purple-faq {
+  color: #560936;
+  font-size: 30px;
+}
+
+.grey-faq {
+  margin: auto;
+  background-color: #FAFAFA;
+  width: 80%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  height: 80vh;
+}
+
+#social > img {
+  max-width: 2%;
+  margin-left: 1%;
+  padding-bottom: 70px;
 }
